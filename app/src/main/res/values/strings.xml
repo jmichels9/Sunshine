@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Sunshine</string>
+    <string name="today">Today, Jan. 19, 2015</string>
+    <string name="high">21℉</string>
+    <string name="low">8℉</string>
+
+    <!-- Action Strings -->
+    <string name="action_settings">Settings</string>
+    <string name="action_refresh">Refresh</string>
+
+    <!-- Activity Details -->
+    <string name="title_activity_detail">Details</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Settings Preferences -->
+    <string name="pref_location_label">Location</string>
+    <string name="pref_location_key" translatable="false">location</string>
+    <string name="pref_location_default" translatable="false">Lincoln,NE</string>
+    <string name="pref_units_label">Temperature Units</string>
+    <string name="pref_units_key" translatable="false">temperature_units</string>
+    <string name="pref_units_fahrenheit">fahrenheit</string>
+    <string name="pref_units_celsius">celsius</string>
+
+
+</resources>
