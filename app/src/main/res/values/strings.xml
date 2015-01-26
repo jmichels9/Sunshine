@@ -9,6 +9,8 @@
     <!-- Action Strings -->
     <string name="action_settings">Settings</string>
     <string name="action_refresh">Refresh</string>
+    <string name="action_view_location">Location</string>
+    <string name="action_share">Share</string>
 
     <!-- Activity Details -->
     <string name="title_activity_detail">Details</string>
@@ -20,8 +22,8 @@
     <string name="pref_location_default" translatable="false">Lincoln,NE</string>
     <string name="pref_units_label">Temperature Units</string>
     <string name="pref_units_key" translatable="false">temperature_units</string>
-    <string name="pref_units_fahrenheit">fahrenheit</string>
-    <string name="pref_units_celsius">celsius</string>
+    <string name="pref_units_fahrenheit">Fahrenheit</string>
+    <string name="pref_units_celsius">Celsius</string>
 
 
 </resources>
