@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:xliff="http://schemas.android.com/apk/res-auto">
 
     <string name="app_name">Sunshine</string>
-    <string name="today">Today, Jan. 19, 2015</string>
     <string name="high">21℉</string>
     <string name="low">8℉</string>
 
@@ -26,5 +25,14 @@
     <string name="pref_units_celsius">Celsius</string>
     <string name="helper_weather_icon">Weather Icon</string>
 
+    <!-- Date label when displaying today's weather forecast [CHAR LIMIT=20] -->
+    <string name="today">Today</string>
 
+    <!-- Date label when displaying tomorrow's weather forecast [CHAR LIMIT=20] -->
+    <string name="tomorrow">Tomorrow</string>
+
+    <!-- Date format for displaying day of week and date (i.e. Mon Jun 1) [CHAR LIMIT=20] -->
+    <string name="format_full_friendly_date">
+        <xliff:g id="day">%1$s</xliff:g>, <xliff:g id="date">%2$s</xliff:g>
+    </string>
 </resources>
