@@ -23,28 +23,30 @@
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
+            android:layout_height="fill_parent"
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp">
 
             <LinearLayout
                 android:orientation="vertical"
-                android:layout_width="fill_parent"
+                android:layout_width="0dp"
                 android:layout_height="fill_parent"
                 android:id="@+id/detail_temp_layout"
                 android:layout_weight="1"
-                android:focusable="false">
+                android:focusable="false"
+                android:gravity="center_vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/detail_high_textview"
-                    android:textSize="32dp" />
+                    android:textSize="32sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/detail_low_textview"
-                    android:text="8"
-                    android:textSize="32dp" />
+                    android:textSize="32sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -58,13 +60,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/detail_forecast_imageview"
-                    android:src="@drawable/ic_launcher" />
+                    android:contentDescription="Forecast Image" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/detail_forecast_textview"
-                    android:text="Sunny" />
+                    android:id="@+id/detail_forecast_textview" />
 
             </LinearLayout>
 
