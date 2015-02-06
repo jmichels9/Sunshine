@@ -28,7 +28,7 @@
     <string name="pref_location_key" translatable="false">location</string>
 
     <!-- Default postal code for location preference [CHAR LIMIT=NONE] -->
-    <string name="pref_location_default" translatable="false">94043</string>
+    <string name="pref_location_default" translatable="false">Lincoln, NE</string>
 
     <!-- Strings related to Notification preference -->
     <string name="pref_last_sync">last_sync</string>
@@ -88,7 +88,8 @@
         Weather for <xliff:g id="date">%1$s</xliff:g> in <xliff:g id="location">%2$s</xliff:g>:
         A high of <xliff:g id="high">%3$s</xliff:g> and low of
         <xliff:g id="low">%4$s</xliff:g></string>
+
     <!-- SyncAdapter related -->
-    <string name="sync_account_type">example.com</string>
-    <string name="sync_authority">"com.example.android.sunshine.app"</string>
+    <string name="sync_account_type">sunshine.example.com</string>
+    <string name="content_authority">com.example.jaymichels.sunshine</string>
 </resources>

@@ -1,6 +1,5 @@
 package com.example.jaymichels.sunshine;
 
-import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
@@ -20,7 +19,7 @@ import android.widget.ListView;
 import com.example.jaymichels.sunshine.data.WeatherContract;
 import com.example.jaymichels.sunshine.data.WeatherContract.WeatherEntry;
 import com.example.jaymichels.sunshine.data.WeatherContract.LocationEntry;
-import com.example.jaymichels.sunshine.service.SunshineService;
+import com.example.jaymichels.sunshine.sync.SunshineSyncAdapter;
 
 import java.util.Date;
 
@@ -157,10 +156,7 @@ public class ForecastFragment extends Fragment implements LoaderManager.LoaderCa
     }
 
     private void updateWeather() {
-        Intent intent = new Intent(getActivity(), SunshineService.class);
-        intent.putExtra(SunshineService.LOCATION_QUERY_EXTRA,
-        Utility.getPreferredLocation(getActivity()));
-        getActivity().startService(intent);
+        SunshineSyncAdapter.syncImmediately(getActivity());
     }
 
     @Override
