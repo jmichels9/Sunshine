@@ -166,18 +166,7 @@ public class Utility {
         }
     }
 
-    public static String getFormattedWind(Context context, float windSpeed, float degrees) {
-        int windFormat;
-        if (Utility.isMetric(context)) {
-            windFormat = R.string.format_wind_kmh;
-        } else {
-            windFormat = R.string.format_wind_mph;
-            windSpeed = .621371192237334f * windSpeed;
-        }
-
-        // From wind direction in degrees, determine compass direction as a string (e.g NW)
-        // You know what's fun, writing really long if/else statements with tons of possible
-        // conditions.  Seriously, try it!
+    public static String calculateDirection(float degrees) {
         String direction = "Unknown";
         if (degrees >= 337.5 || degrees < 22.5) {
             direction = "N";
@@ -196,6 +185,23 @@ public class Utility {
         } else if (degrees >= 292.5 || degrees < 22.5) {
             direction = "NW";
         }
+        return direction;
+    }
+
+    public static String getFormattedWind(Context context, float windSpeed, float degrees) {
+        int windFormat;
+        if (Utility.isMetric(context)) {
+            windFormat = R.string.format_wind_kmh;
+        } else {
+            windFormat = R.string.format_wind_mph;
+            windSpeed = .621371192237334f * windSpeed;
+        }
+
+        // From wind direction in degrees, determine compass direction as a string (e.g NW)
+        // You know what's fun, writing really long if/else statements with tons of possible
+        // conditions.  Seriously, try it!
+        String direction = calculateDirection(degrees);
+
         return String.format(context.getString(windFormat), windSpeed, direction);
     }
 

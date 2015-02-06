@@ -8,9 +8,13 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:theme="@style/AppTheme" >
+
         <provider
             android:authorities="com.example.jaymichels.sunshine"
             android:name=".data.WeatherProvider" />
+
+        <service android:name=".service.SunshineService"/>
+
         <activity
             android:name=".MainActivity"
             android:theme="@style/ForecastTheme"

@@ -65,6 +65,7 @@ public class DetailFragment extends Fragment implements LoaderManager.LoaderCall
     private TextView mHumidityView;
     private TextView mWindView;
     private TextView mPressureView;
+    private MyView mWindGraphicView;
 
     public DetailFragment() {
         setHasOptionsMenu(true);
@@ -99,6 +100,7 @@ public class DetailFragment extends Fragment implements LoaderManager.LoaderCall
         mHumidityView = (TextView) rootView.findViewById(R.id.detail_humidity_textview);
         mWindView = (TextView) rootView.findViewById(R.id.detail_wind_textview);
         mPressureView = (TextView) rootView.findViewById(R.id.detail_pressure_textview);
+        mWindGraphicView = (MyView) rootView.findViewById(R.id.detail_wind_graphic);
         return rootView;
     }
 
@@ -219,6 +221,9 @@ public class DetailFragment extends Fragment implements LoaderManager.LoaderCall
 
             // We still need this for the share intent
             mForecast = String.format("%s - %s - %s/%s", dateText, description, high, low);
+
+            mWindGraphicView.setDirection(MyView.WindDirection.valueOf(Utility.calculateDirection(windDirStr)));
+            mWindGraphicView.setSpeed(windSpeedStr);
 
             // If onCreateOptionsMenu has already happened, we need to update the share intent now.
             if (mShareActionProvider != null) {

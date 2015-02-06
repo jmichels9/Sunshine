@@ -10,6 +10,7 @@ import android.preference.PreferenceActivity;
 import android.preference.PreferenceManager;
 
 import com.example.jaymichels.sunshine.data.WeatherContract;
+import com.example.jaymichels.sunshine.service.SunshineService;
 
 
 /**
